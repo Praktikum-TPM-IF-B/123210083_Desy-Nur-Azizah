@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:quizz/home.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -12,6 +13,8 @@ class _LoginPageState extends State<LoginPage> {
   String username = "";
   String password = "";
   String message = "";
+
+  bool isLoginSuccess = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,8 +26,6 @@ class _LoginPageState extends State<LoginPage> {
             _header(),
             _inputField(),
             _buttonLogin(context),
-            _forgotPassword(),
-            _signup(),
           ],
         ),
       ),
@@ -35,10 +36,9 @@ class _LoginPageState extends State<LoginPage> {
     return const Column(
       children: [
         Text(
-          "Login",
+          "E-LEARNING UPNYK",
           style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
         ),
-        Text("Hello, welcome back"),
       ],
     );
   }
@@ -58,10 +58,10 @@ class _LoginPageState extends State<LoginPage> {
           decoration: InputDecoration(
               // errorText: message ? "username salah" : null,
               hintText: "Username",
-              enabledBorder: OutlineInputBorder(
-                  borderSide:
-                      BorderSide(color: isError ? Colors.red : Colors.blue),
-                  borderRadius: BorderRadius.circular(18)),
+              // enabledBorder: OutlineInputBorder(
+              //     borderSide:
+              //         BorderSide(color: isError ? Colors.red : Colors.blue),
+              //     borderRadius: BorderRadius.circular(18)),
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(18),
                   borderSide: BorderSide.none),
@@ -80,21 +80,14 @@ class _LoginPageState extends State<LoginPage> {
             filled: true,
             prefixIcon: const Icon(Icons.password),
           ),
+          onChanged: (value) {
+            setState(() {
+              password = value;
+            });
+          },
           obscureText: true,
         ),
         const SizedBox(height: 10),
-        // ElevatedButton(
-        //   onPressed: () {},
-        //   style: ElevatedButton.styleFrom(
-        //     shape: const StadiumBorder(),
-        //     padding: const EdgeInsets.symmetric(vertical: 16),
-        //     backgroundColor: Colors.blue,
-        //   ),
-        //   child: const Text(
-        //     "Login",
-        //     style: TextStyle(fontSize: 20, color: Colors.white),
-        //   ),
-        // )
       ],
     );
   }
@@ -105,15 +98,21 @@ class _LoginPageState extends State<LoginPage> {
       width: MediaQuery.of(context).size.width,
       child: ElevatedButton(
         onPressed: () {
-          print("username: " + username);
-          print("password: " + password);
+          print("$isLoginSuccess");
 
-          String text = "Login Succes";
+          String text = "";
 
           if (username == "flutter" && password == "flutter123") {
             setState(() {
-              // isValid = true;
+              text = "Login Success";
+              isLoginSuccess = true;
             });
+
+            Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomePage(),
+                ));
           } else {
             text = "Login gagal";
           }
@@ -134,31 +133,6 @@ class _LoginPageState extends State<LoginPage> {
           backgroundColor: Colors.blue,
         ),
       ),
-    );
-  }
-
-  Widget _forgotPassword() {
-    return TextButton(
-      onPressed: () {},
-      child: const Text(
-        "Forgot password?",
-        style: TextStyle(color: Colors.blueGrey),
-      ),
-    );
-  }
-
-  Widget _signup() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const Text("Dont have an account? "),
-        TextButton(
-            onPressed: () {},
-            child: const Text(
-              "Sign Up",
-              style: TextStyle(color: Colors.blueGrey),
-            ))
-      ],
     );
   }
 }
