@@ -1,16 +1,14 @@
-# quizz
+# Praktikum Pemrograman Mobile
 
-A new Flutter project.
+Kuis Praktikum Teknologi dan Pemrograman Mobile IF-B
+Desy Nur Azizah (123210083)
 
-## Getting Started
+## About the project
+![Login](https://res.cloudinary.com/desyna/image/upload/v1711284826/Screenshot_2024-03-24_195122_ssokkp.png)
+![Home](https://res.cloudinary.com/desyna/image/upload/v1711284826/Screenshot_2024-03-24_195140_ydjug6.png)
+![Profile](https://res.cloudinary.com/desyna/image/upload/v1711284827/Screenshot_2024-03-24_195152_duiqai.png)
 
-This project is a starting point for a Flutter application.
+## Contact
+Desy Nur Azizah - desy15111@gmail.com
+Project Link: [](https://github.com/Praktikum-TPM-IF-B/123210083_Desy-Nur-Azizah)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
