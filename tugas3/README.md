@@ -4,12 +4,12 @@ Using the information provided by [Json Placeholder](https://jsonplaceholder.typ
 
 Models that we are going to use:
 
-✅ /posts
-✅ /comments
-✅ /albums
-✅ /photos
-✅ /all
-✅ /users
+1. /posts
+2. /comments
+3. /albums
+4. /photos
+5. /all
+6. /users
 
 ## Getting Started
 
