@@ -1,6 +1,15 @@
-# coba
+# JSONPlaceholderDjango
 
-A new Flutter project.
+Using the information provided by [Json Placeholder](https://jsonplaceholder.typicode.com/) we will build a rest api in Django from the models provided by the website.
+
+Models that we are going to use:
+
+ /posts
+ /comments
+ /albums
+ /photos
+ /all
+ /users
 
 ## Getting Started
 
